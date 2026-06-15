@@ -35,6 +35,9 @@ function NavBar({ pokemonList, pokemonTypes, setSelectedName, setSelectedType }:
           onClick={() => {
             setSelectedName(pokemon.name);
             setSelectedType(null);
+              if (pokemon.name === "Pikachu") {
+                alert("Sorry i don't speak French");
+            }
           }}
         >
           {pokemon.name}

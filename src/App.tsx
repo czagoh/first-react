@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/NavBar";
+import { useEffect } from "react";
 
 const pokemonList = [
   { name: "Bulbasaur",  
@@ -73,6 +74,13 @@ const pokemonTypes = [
 function App() {
   const [selectedType, setSelectedType] = useState<string | null>(null); // string ou null (valeur de base)
   const [selectedName, setSelectedName] = useState<string | null>(null);
+
+    useEffect (
+    () => {
+      alert("Saccharomyces cerevisiae, ça veut dire Levure de boulanger en latin");
+    },
+    []
+  );
 
   const filteredPokemon = selectedName
     ? pokemonList.filter((pok) => pok.name === selectedName)  //si selctedName existe, garde le nom du pokémon
